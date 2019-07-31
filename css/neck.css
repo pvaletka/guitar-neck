@@ -1,0 +1,114 @@
+table{
+	margin: 0 auto 0;
+	float: left;
+	width: 1200px;
+	position: fixed;
+	left: 20px;
+}
+table tr:first-child td{
+	border-left: none;
+	border-right: none;
+}
+
+table tr.marks td, table tr.numbers td{
+	border: none;
+	padding-top: 3px;
+	height: 30px;
+}
+div.fred-mark{
+	border-radius: 10px;
+	width: 3px;
+	height: 3px;
+	background-color: #000;
+	margin: 0 auto;
+}
+
+
+table td{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	font-size: 10px;
+	text-align: center;
+	padding:5px 10px;
+}
+
+table td:first-child {
+	border: none;
+}
+
+table td > div{
+	border: 1px solid #CCC;
+	border-radius: 20px;
+	position: relative;
+	top: 15px;
+	background-color: #FFF;
+	width: 30px;
+	padding: 3px;
+	color: #CCC;
+}
+
+div.active{color: #000; opacity: 1;}
+div.active.A{background-color: #b27df5}
+div.active.AS{background-color: #b27df5}
+
+div.active.B{background-color: #7de3f5}
+
+div.active.C{background-color: #b27df5}
+div.active.CS{background-color: #d7c0f5}
+
+div.active.D{background-color: #ff6f6f}
+div.active.DS{background-color: #ffb6b6}
+
+div.active.E{background-color: #f5cc7d}
+
+div.active.F{background-color: #f5f27d}
+div.active.FS{background-color: #f5f27d}
+
+div.active.G{background-color: #f57deb}
+div.active.GS{background-color: #f57deb}
+
+div.AS > span,
+div.CS > span,
+div.DS > span,
+div.FS > span,
+div.GS > span {
+	/*opacity: 0.4;*/
+}
+
+div.active.key {
+	font-weight: bold;
+	background-color: green;
+	color: #FFF;
+}
+
+div.active.blues {
+	font-weight: bold;
+	background-color: red;
+	color: #FFF;
+}
+
+td.grey{
+	background-color: #EEE;
+}
+
+/* CONTROLS */
+#key-switch > label{
+	width: 40px;
+}
+
+.overflow {
+	border: 1px solid black;
+	margin: 0 10px;
+	background-color: #999;
+	opacity: 0.9;
+	width: 10px;
+	float: left;
+    height: 225px;
+    position: relative !important;
+    z-index: 10000;
+}
+
+.overflow.right {
+	float: right;
+}
