@@ -1,9 +1,14 @@
+#table-holder{
+    display: block;
+    overflow-x: scroll;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 table{
 	margin: 0 auto 0;
 	float: left;
 	width: 1200px;
-	position: fixed;
-	left: 20px;
 }
 table tr:first-child td{
 	border-left: none;
