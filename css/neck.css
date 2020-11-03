@@ -54,6 +54,7 @@ table td > div{
 }
 
 div.active{color: #000; opacity: 1;}
+
 div.active.A{background-color: #b27df5}
 div.active.AS{background-color: #b27df5}
 

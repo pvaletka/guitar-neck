@@ -22,17 +22,17 @@
 		<div class="col">
 			<div class="btn-group btn-group-toggle" id="key-switch" data-toggle="buttons">
 				<label class="btn btn-sm btn-outline-secondary active"><input type="radio" name="key" value="A" checked> A</label>
-				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="AS">A#</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="A#">A#</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="B">B</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="C">C</label>
-				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="CS">C#</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="C#">C#</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="D">D</label>
-				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="DS">D#</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="D#">D#</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="E">E</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="F">F</label>
-				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="FS">F#</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="F#">F#</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="G">G</label>
-				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="GS">G#</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="G#">G#</label>
 			</div>
 		</div>
 		<div class="col">
@@ -189,6 +189,7 @@ var drawScale = function(k, h){
 			selected.push(getNoteByPos(kp).replace("#", "S"));
 		}
 
+/*
 		if(sdmn == ind+1){
 			$("div."+getNoteByPos(kp).replace("#", "S")+">span").text(getNoteByPos(kp) + "s");
 		}
@@ -196,7 +197,7 @@ var drawScale = function(k, h){
 		if(dmn == ind+1){
 			$("div."+getNoteByPos(kp).replace("#", "S")+">span").text(getNoteByPos(kp) + "d");			
 		}
-
+*/		
 		if($("#blues").is(":checked") && bluesPos[h] == ind){
 			bluesNote = getBem(getNoteByPos(kp)).replace("#", "S");
 		}
