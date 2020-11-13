@@ -80,6 +80,14 @@
 <!--<div class="overflow left" ></div>
 <div class="overflow right"></div>
 -->
+
+<div id="scale-notes-holder">
+	<table id="scale-notes" cellspacing="0">
+		
+	</table>
+</div>
+
+
 <div id="table-holder">
 <table id="neck" cellspacing="0"></table>
 </div>
@@ -157,11 +165,49 @@ var drawNeck = function(){
 	})
 };
 
+var drawNotes = function(k, h){
+	return new Promise((resolve, reject)=>{
+		var $row = $("<tr/>");
+		start = notes.indexOf(k);
+
+		var sc = scales[h];
+		var step = 1;
+		sc.forEach((s, ind)=>{
+			for (i=1; i<s; i++){
+				$row.append("<td/>")
+			}
+			$row.append("<td>"+step+"</td>");
+			step++;
+		})
+
+		// notes.forEach((note, ind)=>{
+		// 	$row.append("<td>"+(ind+1)+"</td>")
+		// })
+
+		$("#scale-notes").append($row);
+
+		$row = $("<tr/>");
+		for(i=start; i<notes.length; i++){
+			var $cell = $("<td><div class='"+notes[i].replace("#", "S")+"'><span>"+notes[i]+"</span></div></td>");
+			$row.append($cell)
+		}
+
+		for(i=0; i<start; i++){
+			var $cell = $("<td><div class='"+notes[i].replace("#", "S")+"'><span>"+notes[i]+"</span></div></td>");
+			$row.append($cell)
+		}
+
+		$("#scale-notes").append($row);
+		resolve();
+	})
+}
+
 var reset = function(){
 	// $("#neck div").removeClass("active")
 	// 	.removeClass("key")
 	// 	.removeClass("blues");
 	$("#neck tr").remove();
+	$("#scale-notes tr").remove();
 }
 
 var getNoteByPos = function(pos){
@@ -207,15 +253,17 @@ var drawScale = function(k, h){
 		$("div."+note).addClass("active");
 	});
 
-	$("div."+k).addClass("key");
+	$("div."+k.replace("#", "S")).addClass("key");
 	$("div."+bluesNote).addClass("active");
 	$("div."+bluesNote).addClass("blues");
+
+
 };
 
 $(()=>{
 	$("#tuningSelect").change((e)=>{
 		strings = tunings[$(e.target).find("option:selected").val()];
-		reset(); drawNeck().then(()=>{drawScale(_KEY, _HARMONY);});
+		reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))
 	})
 
 	Object.keys(tunings).forEach((key)=>{
@@ -227,25 +275,25 @@ $(()=>{
 
 	$("#key-switch label").on('click', (event)=>{
 		_KEY = $(event.target).find("input").val();
-		reset(); drawNeck().then(()=>{drawScale(_KEY, _HARMONY);});
+		reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))
 	});
 
 	$("#harmony-switch label").on('click', (event)=>{
 		_HARMONY = $(event.target).find("input").val();
-		reset(); drawNeck().then(()=>{drawScale(_KEY, _HARMONY);});
+		reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))
 	});
 
-	$("#pent").on("change", ()=>{reset(); drawNeck().then(()=>{drawScale(_KEY, _HARMONY);});});
-	$("#blues").on("change", ()=>{reset(); drawNeck().then(()=>{drawScale(_KEY, _HARMONY);});});
+	$("#pent").on("change", ()=>{reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))});
+	$("#blues").on("change", ()=>{reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))});
 
-	drawNeck()
-	.then(()=>{
-		drawScale(_KEY, _HARMONY);
-	});
+	drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}));
 
-	$( ".overflow" ).resizable({
+	/*$( ".overflow" ).resizable({
 		handles: "e, w"
-	});
+	});*/
+
+
+
 })
 
 </script>
