@@ -1,0 +1,644 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin-",
+				"margin-bottom\tproperty"
+			],
+			[
+				"scale",
+				"scale-notes"
+			],
+			[
+				"isNa",
+				"isNaN\t( number: number ): boolean NativeScript - Module NativeScript"
+			],
+			[
+				"backgrou",
+				"background-color\tproperty"
+			],
+			[
+				"blues",
+				"bluesNote"
+			],
+			[
+				"blue",
+				"bluesNote"
+			],
+			[
+				"addB",
+				"addBlues"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"task",
+				"taskName"
+			],
+			[
+				"_GL",
+				"_GLB_SEARCH_KEYWORDS"
+			],
+			[
+				"_G",
+				"_GLB_SEARCH_KEYWORDS"
+			],
+			[
+				"_GLB",
+				"_GLB_SEARCH_PERIOD"
+			],
+			[
+				"suc",
+				"success"
+			],
+			[
+				"launch",
+				"launchBP"
+			],
+			[
+				"inputDa",
+				"inputDataBASE64"
+			],
+			[
+				"len",
+				"length\t: unsigned long Window"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"wait",
+				"waitForNextTask"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"ca",
+				"callback"
+			],
+			[
+				"field",
+				"fieldValue"
+			],
+			[
+				"vali",
+				"validatePageRange"
+			],
+			[
+				"fiel",
+				"fieldValue"
+			],
+			[
+				"answer",
+				"answerCount"
+			],
+			[
+				"fields",
+				"fieldsToDelete"
+			],
+			[
+				"for",
+				"for\tfor (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"buttons",
+				"buttonsCell"
+			],
+			[
+				"currentDocu",
+				"currentDocumentType"
+			],
+			[
+				"first",
+				"firstDoc"
+			],
+			[
+				"calcu",
+				"calculateExtractedCount"
+			],
+			[
+				"toU",
+				"toUpperCase"
+			],
+			[
+				"keys",
+				"keysToSort"
+			],
+			[
+				"model",
+				"modelsList"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"submit",
+				"submitTask"
+			],
+			[
+				"models",
+				"modelsMap"
+			],
+			[
+				"val",
+				"val"
+			],
+			[
+				"answers",
+				"answersToShow"
+			],
+			[
+				"hidden",
+				"hiddenFields"
+			],
+			[
+				"hide",
+				"hideUnusedFields"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"init",
+				"initTODD"
+			],
+			[
+				"generate",
+				"generateTable"
+			],
+			[
+				"vessel",
+				"vessel_name"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"curre",
+				"currentDoc"
+			],
+			[
+				"tag",
+				"tagValues"
+			],
+			[
+				"cons",
+				"consValue"
+			],
+			[
+				"doc",
+				"docName"
+			],
+			[
+				"current",
+				"currentDocument"
+			],
+			[
+				"cure",
+				"currentDocument"
+			],
+			[
+				"getSta",
+				"getCurrentStateFromDB"
+			],
+			[
+				"save",
+				"saveStateToDB"
+			],
+			[
+				"taggedText",
+				"taggedText"
+			],
+			[
+				"change",
+				"changeModelTo"
+			],
+			[
+				"from",
+				"fromBack"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"extra",
+				"extractedAnswers"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"consolidate",
+				"consolidateState"
+			],
+			[
+				"saved",
+				"savedState"
+			],
+			[
+				"elem",
+				"element"
+			],
+			[
+				"grou",
+				"groupId"
+			],
+			[
+				"rep",
+				"replace"
+			],
+			[
+				"conso",
+				"consolidatedAnswers"
+			],
+			[
+				"con",
+				"consolidated"
+			],
+			[
+				"all",
+				"allAnswers"
+			],
+			[
+				"multians",
+				"multianswer"
+			],
+			[
+				"currentMo",
+				"currentModelIndex"
+			],
+			[
+				"empty",
+				"emptyState"
+			],
+			[
+				"store",
+				"storedModels"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"on",
+				"onsuccess"
+			],
+			[
+				"load",
+				"loadModel"
+			],
+			[
+				"db",
+				"dbName"
+			],
+			[
+				"origi",
+				"originalDocumentHolder"
+			],
+			[
+				"ori",
+				"originalDocumentHolder"
+			],
+			[
+				"local",
+				"localSubmit"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"add ch",
+				"Package Control: Add Channel"
+			],
+			[
+				"Install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/pvaletka/DATA/Guitar/neck"
+	],
+	"file_history":
+	[
+		"/Users/pvaletka/WORK/COGI/Cielo tool/fixed/html/transcription.html",
+		"/Users/pvaletka/Downloads/wfaw-10055.pem",
+		"/Users/pvaletka/Downloads/Kibana custom dashbboard.ndjson",
+		"/Users/pvaletka/WORK/Architecture/Performance/calc-distribution-infinite.sh",
+		"/Users/pvaletka/WORK/Architecture/Performance/calc-total-workers.sh",
+		"/Users/pvaletka/DATA/Guitar/Hardware/Падение напряжения на светодиодах",
+		"/Users/pvaletka/Downloads/nohup.out",
+		"/Users/pvaletka/WORK/Architecture/Performance/jstack-most-cpu-cons.sh",
+		"/Users/pvaletka/Downloads/stdout (3)",
+		"/Users/pvaletka/Downloads/Aggregated Transaction Timings (Credit + TFSO)",
+		"/Users/pvaletka/Downloads/Detailed Transaction Timings (Credit + TFSO)",
+		"/Users/pvaletka/Downloads/FILEDG32/SQWAVE.pjl",
+		"/Users/pvaletka/DATA/Guitar/Hardware/TubeExp/dmtriodep.inc",
+		"/Users/pvaletka/WORK/Architecture/Performance/servers/boa-lab.txt",
+		"/Users/pvaletka/Downloads/sample_data.csv",
+		"/Users/pvaletka/Downloads/S3_stop_access.txt",
+		"/Users/pvaletka/WORK/Jupyter/hackathon_test_set_analysis.ipynb",
+		"/Users/pvaletka/workspaces/runtime-EclipseApplication111/Custody-classification/src/main/resources/process/project.xml",
+		"/Users/pvaletka/Downloads/AutoML_+Loan+Processing+-++v1.5+01-3-2021/db_properties.csv",
+		"/Volumes/openHAB-conf/rules/floor-heater-schedule.rules",
+		"/Volumes/openHAB-conf/rules/floor_heaters.rules",
+		"/Users/pvaletka/Downloads/export-3.ndjson",
+		"/Volumes/20190201_054604/License.txt",
+		"/Users/pvaletka/Downloads/Metallica.g1xon-k",
+		"/Users/pvaletka/Downloads/input_osama_5.csv",
+		"/Users/pvaletka/Library/Application Support/LTspice/lib/cmp/standard.mos",
+		"/Users/pvaletka/worspaces/idp-uc-package/uc-bcb-assets-bundle/uc-transaction-processing-assets/src/main/resources/business-process/[IDP]+Transaction+Processing+v1.6.9+03-2-2021/project.xml",
+		"/Users/pvaletka/worspaces/idp-uc-package/uc-bcb-assets-bundle/uc-intake-assets/src/main/resources/business-process/[IDP]+Data+Intake_v_1.6.9+28-9-2020/project.xml",
+		"/Users/pvaletka/Library/Application Support/LTspice/lib/cmp/standard.jft",
+		"/Users/pvaletka/Library/Application Support/LTspice/lib/sub/BSS_L0.lib",
+		"/Users/pvaletka/DATA/Guitar/Hardware/TubeExp/dmtriodes.inc",
+		"/Users/pvaletka/DATA/Guitar/Hardware/Tube models/Tube97.lib",
+		"/Users/pvaletka/DATA/Guitar/Hardware/Tube models/tube1.lib",
+		"/Users/pvaletka/Library/Application Support/LTspice/lib/cmp/standard.dio",
+		"/Users/pvaletka/Downloads/Execution Overview",
+		"/Users/pvaletka/Downloads/trash",
+		"/Users/pvaletka/Downloads/keycloak/server.log",
+		"/Users/pvaletka/DATA/Guitar/neck/css/neck.css",
+		"/Users/pvaletka/DATA/Guitar/neck/index.html",
+		"/Users/pvaletka/Library/Application Support/CrossOver/Bottles/Sprint-Layout 6.0 Rus (2020) Repack by Lordar.exe/drive_c/Program Files/Sprint-Layout-6/sprache.ini",
+		"/Users/pvaletka/WORK/Architecture/Performance/servers/psi-0607-wfaw-10037.txt",
+		"/Users/pvaletka/Downloads/rc10161azul-wfaw-10044-env_info.txt",
+		"/Users/pvaletka/WORK/Architecture/Performance/servers/rc08032020-wfaw-10044-env_info.txt",
+		"/Users/pvaletka/WORK/Architecture/Performance/reporting/change settings.sql",
+		"/Users/pvaletka/Downloads/Fixed Rate Note v1.2.txt",
+		"/Users/pvaletka/Downloads/Final v1.1.txt",
+		"/Users/pvaletka/Downloads/Mortgage v1.1.txt",
+		"/Users/pvaletka/DATA/SmartHome/openhab2/conf/automation/jsr223/example.js",
+		"/Users/pvaletka/Downloads/ie-final-review-ftl.txt",
+		"/Users/pvaletka/Downloads/logs1/errors.log",
+		"/Users/pvaletka/Downloads/slow_20200828. txt",
+		"/Users/pvaletka/Downloads/tmp/2708/workspace_production.out.log",
+		"/Users/pvaletka/Downloads/logs1/full-err.log",
+		"/Users/pvaletka/Downloads/logs1/workspace_production.out.log",
+		"/Users/pvaletka/Downloads/logs1/categories.log",
+		"/Users/pvaletka/Downloads/catalina.log",
+		"/Users/pvaletka/Downloads/logs1/workspace.log",
+		"/Users/pvaletka/WORK/Architecture/Performance/reporting/In-Out chart.sql",
+		"/Users/pvaletka/WORK/Architecture/Performance/reporting/aggregated transaction time.sql",
+		"/Users/pvaletka/WORK/Architecture/Performance/reporting/transaction ent-do-end time.sql",
+		"/Users/pvaletka/IdeaProjects/workfusion/workfusion-web/tree.txt",
+		"/Users/pvaletka/Downloads/events_step_397f5e64-ca03-479d-8c05-b240f7656edb_2020-07-31 15_50_52.xlsx",
+		"/Users/pvaletka/Downloads/dump.threads",
+		"/Users/pvaletka/Downloads/stdout",
+		"/Users/pvaletka/WORK/BTT-plugins/Airpods pro/test.sh",
+		"/Users/pvaletka/WORK/Крипта/UTC--2018-08-10T12-46-46.553Z--d01323f944a0714ca800a875c56e8f92348b8f29",
+		"/Users/pvaletka/Downloads/export-2.ndjson",
+		"/Users/pvaletka/Downloads/export.ndjson",
+		"/Users/pvaletka/workspaces/wf-studio-workspace-CLEAN/utils/configs/vote-parser.xml",
+		"/Users/pvaletka/WORK/BAML/logging-improvements.txt",
+		"/Users/pvaletka/Downloads/model_exec_logs_cut_with_deleted_zk_death_pill.log",
+		"/Users/pvaletka/Downloads/model_exec_logs.log",
+		"/Users/pvaletka/Downloads/curl_request.txt",
+		"/Users/pvaletka/Downloads/7f42a3a8-305b-4da9-8b1b-1a1292ccd27e_fab5428c-73ac-4448-85a8-f01d79cb05b8_scan0033-xmlForCorrectedImage-raw_processed.html",
+		"/Users/pvaletka/Downloads/111---7f42a3a8-305b-4da9-8b1b-1a1292ccd27e_fab5428c-73ac-4448-85a8-f01d79cb05b8_scan0033-xmlForCorrectedImage-raw_processed.html",
+		"/Users/pvaletka/WORK/LiveChat/webharvest/slots-extractor.xml",
+		"/Users/pvaletka/WORK/LiveChat/webharvest/conversation_utils.xml",
+		"/Users/pvaletka/Downloads/comparison.html",
+		"/Users/pvaletka/Downloads/example.ccf",
+		"/Users/pvaletka/Downloads/sources.txt",
+		"/Users/pvaletka/Downloads/static-pdf-viewer-markup/css/styles.css",
+		"/Users/pvaletka/Downloads/static-pdf-viewer-markup/comparison.html",
+		"/Users/pvaletka/Downloads/Telegram/export_days.csv",
+		"/Users/pvaletka/Downloads/Telegram/ChatExport_KP/messages2.html",
+		"/Users/pvaletka/Downloads/Telegram/ChatExport_KP/messages.html",
+		"/Users/pvaletka/Downloads/Telegram/ChatExport_KP/messages54.html",
+		"/Users/pvaletka/Downloads/Telegram Desktop/ChatExport_15_10_2019 (1)/messages39.html",
+		"/Users/pvaletka/Downloads/static-pdf-viewer 2/comparison.html",
+		"/Users/pvaletka/Downloads/static-pdf-viewer/comparison.html",
+		"/Users/pvaletka/WORK/Platform-COE/PnG/1.csv",
+		"/Users/pvaletka/Downloads/ClassificationModelConfiguration.java",
+		"/Users/pvaletka/Downloads/ColumnNameFE.java",
+		"/Users/pvaletka/Downloads/ie-hidden-validation-patch.diff",
+		"/Users/pvaletka/Downloads/README.md",
+		"/Applications/LTspice.app/Contents/lib/cmp/standard.dio",
+		"/Users/pvaletka/Downloads/stdout (4)",
+		"/Users/pvaletka/WORK/WFPlatform/wait-for-next-manual-task.ftl",
+		"/Users/pvaletka/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/pvaletka/Downloads/stdout (1)",
+		"/Users/pvaletka/Downloads/stdout (2)",
+		"/Users/pvaletka/WORK/Architecture/Performance/bundle-import-2020-04-23_12-00-24-3N.json",
+		"/Users/pvaletka/Downloads/env-perf-1016-wfaw-10037.txt",
+		"/Users/pvaletka/Downloads/env_info.txt",
+		"/Users/pvaletka/WORK/Architecture/Performance/NN-ML-Input_1100r.csv",
+		"/Users/pvaletka/WORK/Architecture/Performance/NN-ML-Input_1000Record.csv",
+		"/Users/pvaletka/WORK/Architecture/Performance/bundle-import-2020-04-23_14-19-56-3N.json",
+		"/Users/pvaletka/WORK/Architecture/Performance/bundle-import-2020-04-23_14-14-06-3N.json",
+		"/Users/pvaletka/WORK/Architecture/Performance/NN-ML-Input-1015-smoke.csv",
+		"/Users/pvaletka/WORK/Architecture/Performance/NN-ML-Input_10k.csv",
+		"/Users/pvaletka/WORK/Architecture/Performance/NN-ML-Input_500r.csv",
+		"/Users/pvaletka/WORK/Architecture/Performance/NN-ML-Input_100Record.csv",
+		"/Users/pvaletka/Downloads/odf-bcb-10.1.0.7.pom",
+		"/Users/pvaletka/Downloads/Trade+Finance+Sanctions+Screening+-+NEW+FINAL/project.xml",
+		"/Users/pvaletka/Downloads/Telegram Desktop/Протокол по ЧП.docx",
+		"/Users/pvaletka/Downloads/architecture-10.1.svg",
+		"/Users/pvaletka/Downloads/642.threads",
+		"/Users/pvaletka/Downloads/27606.threads",
+		"/Users/pvaletka/WORK/webharvest-configs/date-time-format.xml",
+		"/Users/pvaletka/Downloads/Untitled (2)",
+		"/Users/pvaletka/DATA/Гитара/Гриф/js/jquery-ui.min.js",
+		"/Users/pvaletka/workspaces/wf-studio-workspace-9.1.0/test11111/test11111-bcb/src/main/resources/configs/main/parse-telegram-history.xml",
+		"/Users/pvaletka/Downloads/Yandex-muz.btt",
+		"/Users/pvaletka/workspaces/png/case-classification/case-classification-ml-sdk/out-train-output/training/output/avg-evaluation-results.txt",
+		"/Users/pvaletka/Downloads/7f42a3a8-305b-4da9-8b1b-1a1292ccd27e_fab5428c-73ac-4448-85a8-f01d79cb05b8_scan0033-xmlForCorrectedImage-raw_processed.xml",
+		"/Users/pvaletka/WORK/Platform-COE/JS OCR Viewer/input/train.77a39a56-6e64-432b-8efa-3b118698b08a.html",
+		"/Users/pvaletka/Downloads/train.86fbcb18-3662-4bd8-b825-be98789489d6.html",
+		"/Users/pvaletka/git/negativenews/negativenews-bcb/src/main/resources/configs/main/news-search/google-news-search.xml",
+		"/Users/pvaletka/workspaces/png/case-classification/case-classification-ml-sdk/out-train-output/training/output/model/heuristic/heuristic-results.csv"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 176.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/pvaletka/DATA/Guitar/neck"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 57.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 257.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

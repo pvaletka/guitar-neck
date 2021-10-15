@@ -4,13 +4,15 @@
     margin-left: 20px;
     margin-right: 20px;
     float: left;
-    margin-top: 30px;
 }
 
 #scale-notes-holder {
     display: block;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
+    clear: both;
+    float: left;
 }
 
 #scale-notes-holder table{
@@ -22,6 +24,10 @@
 	border: none;
 }
 
+#scale-notes-holder table tr:first-childr td{
+	top: 20px;
+    position: relative;
+}
 
 table{
 	margin: 0 auto 0;
@@ -44,6 +50,7 @@ div.fred-mark{
 	height: 3px;
 	background-color: #000;
 	margin: 0 auto;
+	display:  inline-block;
 }
 
 
@@ -72,25 +79,24 @@ table td > div{
 }
 
 div.active{color: #000; opacity: 1;}
-
 div.active.A{background-color: #b27df5}
 div.active.AS{background-color: #b27df5}
-
 div.active.B{background-color: #7de3f5}
-
 div.active.C{background-color: #b27df5}
 div.active.CS{background-color: #d7c0f5}
-
 div.active.D{background-color: #ff6f6f}
 div.active.DS{background-color: #ffb6b6}
-
 div.active.E{background-color: #f5cc7d}
-
 div.active.F{background-color: #f5f27d}
 div.active.FS{background-color: #f5f27d}
-
 div.active.G{background-color: #f57deb}
 div.active.GS{background-color: #f57deb}
+
+/* подсветить конкретную позицию пентатоники
+td:not(:nth-child(n+10):nth-child(-n+14)) > div.active {
+	background-color: #FFF !important;
+}
+*/
 
 div.AS > span,
 div.CS > span,
