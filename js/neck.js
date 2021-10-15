@@ -6,6 +6,11 @@ var fretsCount = 26;
 var notes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
 //			  0    1     2    3    4     5    6     7    8    9     10   11
 
+var notesFromE = ["E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#"];
+//			       7    8    9     10   11    0    1     2    3    4     5    6     
+
+
+
 var strings;
 
 var sdmn = 4;
@@ -31,7 +36,6 @@ var scales = {
 	"min":  [0, 2, 1, 2, 2, 1, 2],
 	"maj":  [0, 2, 2, 1, 2, 2, 2]
 }
-
 
 var getNote = function(string, fret){
 	var pos = (string + fret)%12;
@@ -106,9 +110,6 @@ var drawNotes = function(k, h){
 }
 
 var reset = function(){
-	// $("#neck div").removeClass("active")
-	// 	.removeClass("key")
-	// 	.removeClass("blues");
 	$("#neck tr").remove();
 	$("#scale-notes tr").remove();
 }
