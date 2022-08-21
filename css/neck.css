@@ -1,9 +1,11 @@
 #table-holder{
-    display: block;
+    /*display: block;
     overflow-x: scroll;
     margin-left: 20px;
     margin-right: 20px;
-    float: left;
+    float: left;*/
+	width: 100%;
+    padding-right: 20px;    
 }
 
 #scale-notes-holder {
@@ -32,7 +34,7 @@
 table{
 	margin: 0 auto 0;
 	float: left;
-	width: 1200px;
+	width: 100%;
 }
 table tr:first-child td{
 	border-left: none;
@@ -51,6 +53,8 @@ div.fred-mark{
 	background-color: #000;
 	margin: 0 auto;
 	display:  inline-block;
+	color: #000;
+    opacity: 1;
 }
 
 
@@ -60,7 +64,7 @@ table td{
 	border-bottom: 1px solid black;
 	font-size: 10px;
 	text-align: center;
-	padding:5px 10px;
+	padding:5px 6px;
 }
 
 #table-holder table td:first-child {
@@ -75,10 +79,20 @@ table td > div{
 	background-color: #FFF;
 	width: 30px;
 	padding: 3px;
-	color: #CCC;
+	color: #FFF;
+	opacity: 0;
+	margin: auto;
 }
 
-div.active{color: #000; opacity: 1;}
+#table-holder table tr td:first-child div {
+	opacity: 1;
+	color: #000;
+}
+
+
+.active{color: #FFF; opacity: 1;}
+
+/*
 div.active.A{background-color: #b27df5}
 div.active.AS{background-color: #b27df5}
 div.active.B{background-color: #7de3f5}
@@ -91,6 +105,11 @@ div.active.F{background-color: #f5f27d}
 div.active.FS{background-color: #f5f27d}
 div.active.G{background-color: #f57deb}
 div.active.GS{background-color: #f57deb}
+*/
+div.active.A, div.active.AS, div.active.B,
+div.active.C, div.active.CS, div.active.D,
+div.active.DS, div.active.E, div.active.F,
+div.active.FS, div.active.G, div.active.GS {background-color: #2962ff}
 
 /* подсветить конкретную позицию пентатоники
 td:not(:nth-child(n+10):nth-child(-n+14)) > div.active {
@@ -114,7 +133,7 @@ div.active.key {
 
 div.active.blues {
 	font-weight: bold;
-	background-color: red;
+	background-color: #00c1d5;
 	color: #FFF;
 }
 
@@ -123,7 +142,8 @@ td.grey{
 }
 
 /* CONTROLS */
-#key-switch > label{
+#key-switch > label,
+.key-switch > label{
 	width: 40px;
 }
 
@@ -141,4 +161,8 @@ td.grey{
 
 .overflow.right {
 	float: right;
+}
+
+#position-switch{
+	margin-left: 50px;	
 }

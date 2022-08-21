@@ -1,20 +1,23 @@
-var _KEY = "A";
-var _HARMONY = "min";
-var _MODE = "scale"; //notes
+var _KEY = "G";
+var _HARMONY = "maj";
+var _MODE = "normal"; //notes
+var _POSITION = [1];
 
-var fretsCount = 26;
+var FRETS_COUNT = 24;
 var notes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
 //			  0    1     2    3    4     5    6     7    8    9     10   11
 
 var notesFromE = ["E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#"];
 //			       7    8    9     10   11    0    1     2    3    4     5    6     
 
-
-
 var strings;
 
 var sdmn = 4;
 var dmn = 5;
+
+
+var bluesNote = "notexists";
+
 
 var tunings = {
 	"STD": [7, 2, 10, 5, 0, 7],
@@ -37,26 +40,21 @@ var scales = {
 	"maj":  [0, 2, 2, 1, 2, 2, 2]
 }
 
-var getNote = function(string, fret){
-	var pos = (string + fret)%12;
-	return notes[pos];
-}
-
 var drawNeck = function(){
 	return new Promise((resolve, reject)=>{
 		strings.forEach((string, ind)=>{
-			var $row = $("<tr  class='"+string+"'/>");
-			for(i=0; i<fretsCount+1; i++){
+			var $row = $("<tr  class='string "+string+"'/>");
+			for(i=0; i<FRETS_COUNT+1; i++){
 				var $cell = $("<td><div class='"+getNote(string, i).replace("#", "S")+"'><span>"+getNote(string, i)+"</span></div></td>");
-				if(ind > 0 && [3,5,7,9,12,15,17,19,21,23,26].indexOf(i) >= 0){$cell.addClass("grey");}
+				if(ind > 0 && [3,5,7,9,12,15,17,19,21,23].indexOf(i) >= 0){$cell.addClass("grey");}
 				$row.append($cell);
 			}
 			$("#neck").append($row);
 		});
 
 		var $row = $("<tr class='marks'/>");
-		for(i=0; i<fretsCount+1; i++){
-			if([3,5,7,9,12,15,17,19,21,23,26].indexOf(i) >= 0){
+		for(i=0; i<FRETS_COUNT+1; i++){
+			if([3,5,7,9,12,15,17,19,21,23].indexOf(i) >= 0){
 				$row.append("<td><div class='fred-mark'/>"+((i == 12 || i == 26) ? "<div class='fred-mark'/>" : "") +"</td>");
 			}else{
 				$row.append("<td></td>");
@@ -64,8 +62,8 @@ var drawNeck = function(){
 		}
 		$("#neck").append($row);
 		var $row = $("<tr class='numbers'/>");
-		for(i=0; i<fretsCount+1; i++){
-			if([3,5,7,9,12,15,17,19,21,23,26].indexOf(i) >= 0){
+		for(i=0; i<FRETS_COUNT+1; i++){
+			if([3,5,7,9,12,15,17,19,21,23].indexOf(i) >= 0){
 				$row.append("<td>"+i+"</td>");
 			}else{
 				$row.append("<td></td>");
@@ -109,9 +107,9 @@ var drawNotes = function(k, h){
 	})
 }
 
-var reset = function(){
-	$("#neck tr").remove();
-	$("#scale-notes tr").remove();
+var getNote = function(string, fret){
+	var pos = (string + fret)%12;
+	return notes[pos];
 }
 
 var getNoteByPos = function(pos){
@@ -122,15 +120,24 @@ var getNoteByPos = function(pos){
 	return notes[pos];
 }
 
+var getNotePosition = function(string, note){
+	for(i=0; i<FRETS_COUNT+1; i++){
+		if(getNote(string, i) == note){
+			return i
+		}
+	}
+
+	return 0;
+}
+
 var getBem = function(note){
 	return getNoteByPos(notes.indexOf(note) - 2);
 }
 
-var drawScale = function(k, h){
+var getScale = function(k, h){
 	var selected = [];
 	var kp = notes.indexOf(k);
-	var sc = scales[h];
-	var bluesNote = "notexists";
+	var sc = scales[h];	
 	sc.forEach((inc, ind)=>{
 		kp += inc;
 		if($("#pent").is(":checked") && exclPent[h].indexOf((ind+1)) >= 0){
@@ -139,34 +146,90 @@ var drawScale = function(k, h){
 			selected.push(getNoteByPos(kp).replace("#", "S"));
 		}
 
-		if(sdmn == ind+1){
-			$("div."+getNoteByPos(kp).replace("#", "S")+">span").text(getNoteByPos(kp) + "s");
-		}
-
-		if(dmn == ind+1){
-			$("div."+getNoteByPos(kp).replace("#", "S")+">span").text(getNoteByPos(kp) + "d");			
-		}
-/**/		
 		if($("#blues").is(":checked") && bluesPos[h] == ind){
 			bluesNote = getBem(getNoteByPos(kp)).replace("#", "S");
+			//selected.push(bluesNote);
 		}
+		/*
+		*/
 	})
 
-	selected.forEach((note)=>{
-		$("div."+note).addClass("active");
+	return selected;
+}
+
+var drawScale = function(notes, root){
+	notes.forEach((note)=>{
+		$("#scale-notes-holder div."+note).addClass("active");
 	});
 
-	$("div."+k.replace("#", "S")).addClass("key");
-	$("div."+bluesNote).addClass("active");
-	$("div."+bluesNote).addClass("blues");
+	$("div."+root.replace("#", "S")).addClass("key");
 
-
+	if($("#blues").is(":checked")){
+		$("#scale-notes-holder div."+bluesNote).addClass("active");
+		$("#scale-notes-holder div."+bluesNote).addClass("blues");
+	}
 };
+
+
+var drawScaleNew = function(type, k, h){
+	var scaleNotes = getScale(k, h);
+	drawScale(scaleNotes, k);
+
+	_POSITION.forEach((_pos)=>{
+		//analyse _HARMONY. In case of min we need to subtract 1
+
+		var noteByPos;
+		if(_HARMONY == "min"){
+			_pos -=1;
+			noteByPos = scaleNotes[_pos].replace("S", "#");
+			if (_pos < 1) {
+				_pos = 5;
+			}
+		} else {
+			noteByPos = scaleNotes[_pos-1].replace("S", "#");
+		}
+
+		var startPos = [];
+		startPos[0] = getNotePosition(7, noteByPos) - 1;
+		startPos[1] = getNotePosition(7, noteByPos) + 11;
+
+		var scale = scalesArray[type][_pos];
+
+		startPos.forEach((pos)=>{
+			$("tr.string").each(function(rInd, row){
+				$(row).find("div").each(function(cInd, cell){
+					if(cInd < pos) return;
+
+					if(scale[rInd][cInd-pos] == 0){
+						$(cell).addClass("active")
+					}
+
+					if($("#blues").is(":checked")){
+						if(scale[rInd][cInd-pos] == 1){
+							$(cell).addClass("active")
+							$(cell).addClass("blues")
+						}
+					}
+				})
+			})
+		});
+	});
+}
+
+var draw = function(){
+	drawNeck().then(drawNotes(_KEY, _HARMONY).then(drawScaleNew(_MODE, _KEY, _HARMONY)));
+}
+
+var reset = function(){
+	$("#neck tr").remove();
+	$("#scale-notes tr").remove();
+	draw();
+}
 
 $(()=>{
 	$("#tuningSelect").change((e)=>{
 		strings = tunings[$(e.target).find("option:selected").val()];
-		reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))
+		reset();
 	})
 
 	Object.keys(tunings).forEach((key)=>{
@@ -174,27 +237,39 @@ $(()=>{
 	});
 
 	$("#tuningSelect option").children().first().attr("selected", true);
-	strings = tunings[$("#tuningSelect").children().first().val()];
+	//strings = tunings[$("#tuningSelect").children().first().val()];
+	strings = tunings["STD"];
 
-	$("#key-switch label").on('click', (event)=>{
-		_KEY = $(event.target).find("input").val();
-		reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))
+	$("input:radio[name=key]").change((event)=>{
+		_KEY = $("input:radio[name=key]:checked").val();
+		reset();
 	});
 
 	$("#harmony-switch label").on('click', (event)=>{
 		_HARMONY = $(event.target).find("input").val();
-		reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))
+		reset(); 
 	});
 
-	$("#pent").on("change", ()=>{reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))});
-	$("#blues").on("change", ()=>{reset(); drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}))});
-
-	drawNeck().then(drawNotes(_KEY, _HARMONY).then(()=>{drawScale(_KEY, _HARMONY);}));
-
-	/*$( ".overflow" ).resizable({
-		handles: "e, w"
-	});*/
+	$("#scale-mode label").on('click', (event)=>{
+		_MODE = $(event.target).find("input").val();
+		reset(); 
+	});
 
 
+
+	$("input:checkbox[name=position]").change(()=>{
+		_POSITION = []
+		$("input:checkbox[name=position]:checked").each(
+			function(){
+				_POSITION.push($(this).val())
+			})
+		reset();
+
+	})
+
+	$("#pent").on("change", reset);
+	$("#blues").on("change", reset);
+
+	draw();
 
 })

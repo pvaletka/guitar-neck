@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/bootstrap-toggle.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
+	<script type="text/javascript" src="js/scales.js"></script>
 	<script type="text/javascript" src="js/neck.js"></script>
 </head>
 <body>
@@ -22,8 +23,15 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col">
+			<!-- 
+				Maj		A   A#  B   C  C#  D  D#  E   F  F#  G  G#
+				Min 	F#  G   G#  A  A#  B  C   C#  D  D#  E  F
+			<div class="btn-group btn-group-toggle">
+				<label class="btn btn-sm btn-outline-primary" style="width: 60px">Major</label>
+			</div>
+			-->
 			<div class="btn-group btn-group-toggle" id="key-switch" data-toggle="buttons">
-				<label class="btn btn-sm btn-outline-secondary active"><input type="radio" name="key" value="A" checked> A</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="A"> A</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="A#">A#</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="B">B</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="C">C</label>
@@ -33,39 +41,71 @@
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="E">E</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="F">F</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="F#">F#</label>
-				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="G">G</label>
+				<label class="btn btn-sm btn-outline-secondary active"><input type="radio" name="key" value="G" checked>G</label>
 				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="key" value="G#">G#</label>
 			</div>
+			<!--
+			<span style="display: block" />
+			<div class="btn-group btn-group-toggle">
+				<label class="btn btn-sm btn-outline-primary  disabled" style="width: 60px">Minor</label>
+			</div>
+			<div class="btn-group key-switch" style="margin-top: 8px;">
+				<label class="btn btn-sm btn-outline-secondary disabled">F#</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">G</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">G#</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">A</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">A#</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">B</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">C</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">C#</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">D</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">D#</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">E</label>
+				<label class="btn btn-sm btn-outline-secondary disabled">F</label>
+			</div>
+		-->
 		</div>
+	</div>
+
+	<div class="row mt-2 scale-controls">
+		<div class="col">
+			<div class="btn-group btn-group-toggle" id="harmony-switch" data-toggle="buttons">
+				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="harmony" value="min">Минор</label>
+				<label class="btn btn-sm btn-outline-secondary active"><input type="radio" name="harmony" value="maj"  checked>Мажор</label>
+			</div>
+		</div>
+	</div>
+	<div class="custom-control custom-switch custom-control-inline">
+	  <input type="checkbox" class="custom-control-input" id="blues">
+	  <label class="custom-control-label" for="blues">Блюзовая нота</label>
+	</div>
+	<!--
+	-->
+
+	<div class="row">
+		<!--
 		<div class="col">
 			<select class="form-control form-control-sm" id="tuningSelect">
 				
 			</select>
 		</div>
+		-->
 	</div>
-	<!--
 	<div class="row mt-2">
 		<div class="col">
-			<div class="btn-group btn-group-toggle" data-toggle="buttons">
-				<label class="btn btn-sm btn-outline-secondary active"><input type="radio" name="view-mode" value="scale" checked>Гаммы</label>
-				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="view-mode" value="notes">Ноты</label>
+			<div class="btn-group btn-group-toggle" id="scale-mode" data-toggle="buttons">
+				<label class="btn btn-sm btn-outline-secondary active"><input type="radio" name="scale-mode" value="normal" checked>Обычная</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="scale-mode" value="diag">Диагональная</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="scale-mode" id="pent" value="pent">Пентатоника</label>
 			</div>
 		</div>
 	</div>	
--->
 
-	<div class="row mt-2 scale-controls">
-		<div class="col">
-			<div class="btn-group btn-group-toggle" id="harmony-switch" data-toggle="buttons">
-				<label class="btn btn-sm btn-outline-secondary active"><input type="radio" name="harmony" value="min" checked>Минор</label>
-				<label class="btn btn-sm btn-outline-secondary"><input type="radio" name="harmony" value="maj">Мажор</label>
-			</div>
-		</div>
-	</div>
+	<!--
 	<div class="row mt-2 scale-controls" style="margin-bottom: 30px">
 		<div class="col">
 			<div class="custom-control custom-switch custom-control-inline">
-			  <input type="checkbox" class="custom-control-input" id="pent" checked>
+			  <input type="checkbox" class="custom-control-input" id="pent">
 			  <label class="custom-control-label" for="pent">Пентатоника</label>
 			</div>
 			<div class="custom-control custom-switch custom-control-inline">
@@ -75,6 +115,7 @@
 
 		</div>
 	</div>
+	-->
 
 
 </div>
@@ -100,6 +141,24 @@
 </ol>
 </div>
 
+<!-- Positions switch -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col">
+			<div class="btn-group btn-group-toggle" id="position-switch" data-toggle="buttons">
+				<label class="btn btn-sm btn-outline-secondary active"><input type="checkbox" name="position" value="1" checked>1</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="checkbox" name="position" value="2">2</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="checkbox" name="position" value="3">3</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="checkbox" name="position" value="4">4</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="checkbox" name="position" value="5">5</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="checkbox" name="position" value="6">6</label>
+				<label class="btn btn-sm btn-outline-secondary"><input type="checkbox" name="position" value="7">7</label>
+			</div>			
+		</div>
+	</div>
+</div>
+
+<!-- Neck -->
 <div id="table-holder">
 <table id="neck" cellspacing="0"></table>
 </div>
